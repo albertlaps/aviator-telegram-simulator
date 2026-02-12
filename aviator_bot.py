@@ -7,7 +7,7 @@ from telegram.ext import (
     ContextTypes,
 )
 
-BOT_TOKEN = os.environ.get("8593675779:AAG8w5kro2t74SnKE1SBnBiGr4IsjY0CIns")
+BOT_TOKEN = os.environ.get("8593675779:AAHl0kobjQirgfh4J_s1OFit7W909cGhhzc")
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):

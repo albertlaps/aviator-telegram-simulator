@@ -1,5 +1,3 @@
-
-    main()
 import os
 import random
 from telegram import Update
@@ -11,7 +9,9 @@ if not TOKEN:
     raise ValueError("BOT_TOKEN not set!")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("🎮 Aviator Simulator Started!\nType /play to simulate a round.")
+    await update.message.reply_text(
+        "🎮 Aviator Simulator Started!\nType /play to simulate a round."
+    )
 
 async def play(update: Update, context: ContextTypes.DEFAULT_TYPE):
     multiplier = round(random.uniform(1.00, 5.00), 2)

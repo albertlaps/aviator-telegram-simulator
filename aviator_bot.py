@@ -7,7 +7,7 @@ TOKEN = os.getenv("BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "✈️ Aviator Simulator Bot\n\nUse /play to simulate a round."
+        "✈️ Aviator Simulator Bot\n\nType /play to simulate a round."
     )
 
 async def play(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -15,10 +15,6 @@ async def play(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"🚀 Plane crashed at {crash}x")
 
 def main():
-    if not TOKEN:
-        print("BOT_TOKEN not found!")
-        return
-
     app = ApplicationBuilder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
